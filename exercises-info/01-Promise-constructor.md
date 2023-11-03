@@ -90,3 +90,4 @@ The resolved promise will not change its state to be rejected and the rejected p
 Even though, the most often used way to catch the rejected reason is the .catch() shortcut method, we want you to know that you can pass the onRejected callback within the second argument of .then() method and to be able to use it.
 
 In the e2.js exercise file you will be asked to get and log the rejected promise reason value using the .then() method, so .catch() method is not allowed.
+
