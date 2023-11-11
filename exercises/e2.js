@@ -39,7 +39,7 @@ export const handlePromise = (aPromise) => {
   // Your code goes here...
   return aPromise.then(
     (resolvedValue) => resolvedValue,
-    (rejectedReason) => 'Uh Oh'
+    () => 'Uh Oh'
   );
 };
 

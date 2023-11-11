@@ -22,9 +22,8 @@
 export function parsePromised(string) {
   // Your code goes here...
   return new Promise((resolve, reject) => {
-    const parsedData = JSON.parse(string);
     try {
-      resolve(parsedData);
+      resolve(JSON.parse(string));
     } catch (error) {
       reject(error);
     }
@@ -60,11 +59,7 @@ export const handlePromise = (promise) => {
   return promise
   .then((value) => value)
   .catch((reason) => {
-    if (reason && reason.message) {
-      return onReject(reason);
-    } else {
-      return reason;
-    }
+    return reason.message ? onReject(reason) : reason;
   });
 };
 

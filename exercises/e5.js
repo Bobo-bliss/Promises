@@ -27,8 +27,8 @@ export const getPromise = () => {
     resolve('MANHATTAN');
   })
   .then(attachTitle)
-  .then(console.log)
   .then((result) => {
+    console.log(result);
     return result;
   });
 };
